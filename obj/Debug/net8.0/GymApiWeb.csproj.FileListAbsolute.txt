@@ -70,3 +70,4 @@ C:\Users\linki\Downloads\GymApi\GymApiWeb\obj\Debug\net8.0\GymApiWeb.pdb
 C:\Users\linki\Downloads\GymApi\GymApiWeb\obj\Debug\net8.0\GymApiWeb.genruntimeconfig.cache
 C:\Users\linki\Downloads\GymApi\GymApiWeb\obj\Debug\net8.0\ref\GymApiWeb.dll
 C:\Users\linki\Downloads\GymApi\GymApiWeb\bin\Debug\net8.0\GymApiWeb.staticwebassets.runtime.json
+C:\Users\linki\Downloads\GymApi\GymApiWeb\obj\Debug\net8.0\GymApiWeb.sourcelink.json

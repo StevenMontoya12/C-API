@@ -2,7 +2,7 @@ namespace gymapiweb.Models
 {
     public class Cliente
     {
-    public int ClienteID { get; set; }
+    public Guid ClienteID { get; set; }
     public required string? Nombre { get; set; }
     public required string? Apellido { get; set; }
     public required string? Sexo { get; set; }

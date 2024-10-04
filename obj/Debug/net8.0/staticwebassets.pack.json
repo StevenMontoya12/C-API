@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\cliente.html",
+      "PackagePath": "staticwebassets\\cliente.html"
+    },
+    {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\empleado.html",
+      "PackagePath": "staticwebassets\\empleado.html"
+    },
+    {
       "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

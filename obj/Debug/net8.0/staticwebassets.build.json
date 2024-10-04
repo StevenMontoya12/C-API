@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DEVQjMAkcYP2hkZflasRMR1ZilahQD63XhfIDizCq4c=",
+  "Hash": "KnrUJK7BHtPKRikLLoHEIFfoKF7WqOoyOZGp1l6NW0Y=",
   "Source": "GymApiWeb",
   "BasePath": "_content/GymApiWeb",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\cliente.html",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "cliente.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cliente.html"
+    },
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\empleado.html",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "empleado.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\empleado.html"
+    },
     {
       "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\index.html",
       "SourceId": "GymApiWeb",

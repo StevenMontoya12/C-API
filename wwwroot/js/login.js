@@ -18,10 +18,10 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         const result = await response.json();
         if (result.Role === "Empleado") {
             // Redirigir a la vista de empleado
-            window.location.href = "/empleado"; // Cambia esto por la ruta correcta
+            window.location.href = "empleado.html"; // Ruta correcta para la vista de empleado
         } else if (result.Role === "Cliente") {
             // Redirigir a la vista de cliente
-            window.location.href = "/cliente"; // Cambia esto por la ruta correcta
+            window.location.href = "cliente.html"; // Ruta correcta para la vista de cliente
         }
     } else {
         // Manejar error de inicio de sesión

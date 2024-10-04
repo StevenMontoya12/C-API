@@ -2,7 +2,7 @@ using gymapiweb.Data; // Asegúrate de que el espacio de nombres es correcto
 using gymapiweb.Models; // Asegúrate de que este espacio de nombres esté presente
 using gymapiweb.Services; // Asegúrate de que este espacio de nombres esté presente
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging; // Asegúrate de agregar esto
+using Microsoft.Extensions.Logging; // Asegúrate de incluir esto
 using System.Threading.Tasks;
 
 namespace gymapiweb.Controllers
@@ -31,11 +31,8 @@ namespace gymapiweb.Controllers
             if (empleado != null)
             {
                 _logger.LogInformation("Inicio de sesión exitoso para empleado con el correo: {Correo}", request.CorreoElectronico);
-                return Ok(new { Role = "Empleado", User = empleado });
-            }
-            else
-            {
-                _logger.LogWarning("Credenciales de empleado inválidas para el correo: {Correo}", request.CorreoElectronico);
+                // Aquí rediriges a la vista de empleados
+                return Ok(new { Role = "Empleado", RedirectUrl = "/vista/empleado", User = empleado });
             }
 
             // Intenta iniciar sesión como cliente
@@ -43,11 +40,8 @@ namespace gymapiweb.Controllers
             if (cliente != null)
             {
                 _logger.LogInformation("Inicio de sesión exitoso para cliente con el correo: {Correo}", request.CorreoElectronico);
-                return Ok(new { Role = "Cliente", User = cliente });
-            }
-            else
-            {
-                _logger.LogWarning("Credenciales de cliente inválidas para el correo: {Correo}", request.CorreoElectronico);
+                // Aquí rediriges a la vista de clientes
+                return Ok(new { Role = "Cliente", RedirectUrl = "/vista/cliente", User = cliente });
             }
 
             // Log cuando todas las credenciales son inválidas
@@ -58,7 +52,7 @@ namespace gymapiweb.Controllers
 
     public class LoginRequest
     {
-        public string CorreoElectronico { get; set; } // Para clientes y empleados
-        public string Password { get; set; }
+        public string? CorreoElectronico { get; set; } // Permitir valores nulos
+        public string? Password { get; set; } // Permitir valores nulos
     }
 }
