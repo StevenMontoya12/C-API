@@ -16,12 +16,17 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
     if (response.ok) {
         const result = await response.json();
-        if (result.Role === "Empleado") {
+        console.log('Respuesta del servidor:', result); // Verifica los datos devueltos
+
+        // Verifica el campo "role" en minúsculas
+        if (result.role === "Empleado") {
             // Redirigir a la vista de empleado
-            window.location.href = "empleado.html"; // Ruta correcta para la vista de empleado
-        } else if (result.Role === "Cliente") {
+            window.location.href = "vista/empleado.html"; // Asegúrate de que la ruta existe
+        } else if (result.role === "Cliente") {
             // Redirigir a la vista de cliente
-            window.location.href = "cliente.html"; // Ruta correcta para la vista de cliente
+            window.location.href = "vista/cliente.html"; // Asegúrate de que la ruta existe
+        } else {
+            console.log("Rol desconocido:", result.role); // Manejar el caso de un rol no esperado
         }
     } else {
         // Manejar error de inicio de sesión

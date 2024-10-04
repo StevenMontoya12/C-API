@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KnrUJK7BHtPKRikLLoHEIFfoKF7WqOoyOZGp1l6NW0Y=",
+  "Hash": "yPC834lFT0aGd9b+aQ4JGBcDFa/Em13Sj7mDdMwB170=",
   "Source": "GymApiWeb",
   "BasePath": "_content/GymApiWeb",
   "Mode": "Default",
@@ -91,6 +91,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\login.js"
+    },
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\vista\\cliente.html",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "vista/cliente.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vista\\cliente.html"
+    },
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\vista\\empleado.html",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "vista/empleado.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\vista\\empleado.html"
     }
   ]
 }

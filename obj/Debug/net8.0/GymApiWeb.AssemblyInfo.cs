@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymApiWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d77772a5f3e4afe2e554fc56dc6dc91802f5661b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b35704e9079789265852fd534215efa7b204e36")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymApiWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymApiWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

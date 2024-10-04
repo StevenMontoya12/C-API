@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\vista\\cliente.html",
+      "PackagePath": "staticwebassets\\vista\\cliente.html"
+    },
+    {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\vista\\empleado.html",
+      "PackagePath": "staticwebassets\\vista\\empleado.html"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GymApiWeb.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
