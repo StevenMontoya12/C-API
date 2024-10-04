@@ -4,7 +4,6 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using gymapiweb.Data;
 using gymapiweb.Models;
-using System.Linq; // Asegúrate de incluir LINQ para usar FirstOrDefault
 
 namespace gymapiweb.Services
 {
@@ -18,24 +17,24 @@ namespace gymapiweb.Services
         }
 
         // Método para iniciar sesión de empleados con manejo de excepciones
-        public async Task<Empleado?> LoginEmpleadoAsync(string usuario, string password)
+        public async Task<Empleado?> LoginEmpleadoAsync(string correo, string password)
         {
             try
             {
-                var empleado = _context.Empleados
-                    .FromSqlRaw("EXEC sp_LoginEmpleado @Usuario, @Password", 
-                                 new SqlParameter("@Usuario", usuario),
+                // Ejecutar el procedimiento almacenado para empleados
+                var empleado = await _context.Empleados
+                    .FromSqlRaw("EXEC sp_LoginEmpleado @Correo, @Password", 
+                                 new SqlParameter("@Correo", correo), // Asegúrate de que el nombre coincide con el parámetro esperado en el SP
                                  new SqlParameter("@Password", password))
-                    .AsEnumerable() // Convierte la consulta a IEnumerable
-                    .FirstOrDefault(); // Usa la versión sincrónica de FirstOrDefault
+                    .FirstOrDefaultAsync(); // Utilizar asíncronamente
 
-                return empleado;
+                return empleado; // Devuelve el empleado si se encuentra
             }
             catch (Exception ex)
             {
-                // Loguear el error o manejarlo de alguna forma
+                // Captura y loguea cualquier error
                 Console.WriteLine($"Error al iniciar sesión como empleado: {ex.Message}");
-                return null;
+                return null; // En caso de error, devuelve null
             }
         }
 
@@ -44,20 +43,20 @@ namespace gymapiweb.Services
         {
             try
             {
-                var cliente = _context.Clientes
+                // Ejecutar el procedimiento almacenado para clientes
+                var cliente = await _context.Clientes
                     .FromSqlRaw("EXEC sp_LoginCliente @CorreoElectronico, @Password", 
-                                 new SqlParameter("@CorreoElectronico", correoElectronico),
+                                 new SqlParameter("@CorreoElectronico", correoElectronico), // Asegúrate de que el nombre coincide con el parámetro esperado en el SP
                                  new SqlParameter("@Password", password))
-                    .AsEnumerable() // Convierte la consulta a IEnumerable
-                    .FirstOrDefault(); // Usa la versión sincrónica de FirstOrDefault
+                    .FirstOrDefaultAsync(); // Utilizar asíncronamente
 
-                return cliente;
+                return cliente; // Devuelve el cliente si se encuentra
             }
             catch (Exception ex)
             {
-                // Loguear el error o manejarlo de alguna forma
+                // Captura y loguea cualquier error
                 Console.WriteLine($"Error al iniciar sesión como cliente: {ex.Message}");
-                return null;
+                return null; // En caso de error, devuelve null
             }
         }
     }

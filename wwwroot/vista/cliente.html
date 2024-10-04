@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Cliente</title>
+    <title>Cliente</title>
+    <!-- Asegúrate de que la ruta al archivo cliente.js sea correcta -->
+    
 </head>
 <body>
-    <h1>Bienvenido Cliente</h1>
-    <p>Esta es la vista para clientes. Aquí puedes visualizar tu información o realizar acciones como cliente.</p>
+    <script defer src="../js/cliente.js"></script> <!-- Verifica que cliente.js esté en la carpeta correcta -->
+    <h1>Bienvenido, <span id="nombreCliente"></span></h1>
+    <p>ID: <span id="clienteID"></span></p>
+    <p>Nombre completo: <span id="nombreCompleto"></span></p>
+    <p>Email: <span id="correoCliente"></span></p>
+
+    <p>Esta es la vista para Clientess. Aquí puedes visualizar tu información o realizar acciones como cliente.</p>
     <a href="/index.html">Cerrar sesión</a> <!-- Enlace para cerrar sesión y volver al login -->
 </body>
 </html>
