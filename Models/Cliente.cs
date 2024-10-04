@@ -1,0 +1,18 @@
+namespace gymapiweb.Models
+{
+    public class Cliente
+    {
+    public int ClienteID { get; set; }
+    public required string? Nombre { get; set; }
+    public required string? Apellido { get; set; }
+    public required string? Sexo { get; set; }
+    public required string? Telefono { get; set; }
+    public required string? CorreoElectronico { get; set; }
+    public required string? Direccion { get; set; }
+    public required string? Password { get; set; }
+
+        
+        
+
+    }
+}

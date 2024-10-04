@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "DEVQjMAkcYP2hkZflasRMR1ZilahQD63XhfIDizCq4c=",
+  "Source": "GymApiWeb",
+  "BasePath": "_content/GymApiWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GymApiWeb\\wwwroot",
+      "Source": "GymApiWeb",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\index.html",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\js\\login.js",
+      "SourceId": "GymApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\",
+      "BasePath": "_content/GymApiWeb",
+      "RelativePath": "js/login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\login.js"
+    }
+  ]
+}
