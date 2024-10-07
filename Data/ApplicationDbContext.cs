@@ -29,16 +29,17 @@ namespace gymapiweb.Data
         }
 
         // Método para iniciar sesión de Cliente
-            public async Task<Cliente> LoginClienteAsync(string correoElectronico, string password)
-            {
-                var cliente = await Clientes
-                    .FromSqlRaw("EXEC sp_LoginCliente @CorreoElectronico, @Password", 
-                                new SqlParameter("@CorreoElectronico", correoElectronico), 
-                                new SqlParameter("@Password", password))
-                    .FirstOrDefaultAsync();
+        public async Task<bool> LoginClienteAsync(string correoElectronico, string password)
+        {
+            // Ejecuta el procedimiento almacenado para iniciar sesión.
+            var result = await Database.ExecuteSqlRawAsync(
+                "EXEC sp_LoginCliente @CorreoElectronico, @Password", 
+                new SqlParameter("@CorreoElectronico", correoElectronico), 
+                new SqlParameter("@Password", password)
+            );
 
-                return cliente; // Retorna el cliente encontrado o null
-            }
-
+            // Retorna true si se afectó al menos una fila, lo que indica un inicio de sesión exitoso.
+            return result > 0;
+        }
     }
 }

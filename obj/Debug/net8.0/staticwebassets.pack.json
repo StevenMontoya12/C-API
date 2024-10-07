@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\cliente.html"
     },
     {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\empleado.html",
       "PackagePath": "staticwebassets\\empleado.html"
     },
@@ -13,16 +17,12 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\js\\cliente.js",
-      "PackagePath": "staticwebassets\\js\\cliente.js"
-    },
-    {
-      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\js\\empleado.js",
-      "PackagePath": "staticwebassets\\js\\empleado.js"
-    },
-    {
       "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "C:\\Users\\linki\\Downloads\\GymApi\\GymApiWeb\\wwwroot\\vista\\cliente.html",

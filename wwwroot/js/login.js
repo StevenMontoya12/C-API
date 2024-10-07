@@ -1,44 +1,57 @@
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
     e.preventDefault(); // Evitar el envío del formulario
 
-    const requestData = {
-        CorreoElectronico: document.getElementById('correoElectronico').value,
-        Password: document.getElementById('password').value
-    };
+    // Verificar si el botón clicado es el de iniciar sesión
+    const clickedButton = e.submitter || document.activeElement;
 
-    try {
-        const response = await fetch('api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(requestData)
-        });
+    if (clickedButton.name === 'login') { // Solo proceder si es el botón de "Iniciar Sesión"
+        const correoElectronico = document.getElementById('correoElectronico').value;
+        const password = document.getElementById('password').value;
 
-        if (response.ok) {
-            const result = await response.json();
-            console.log('Respuesta del servidor:', result); // Verifica los datos devueltos
+        // Debug: Verificar si los campos están siendo capturados
+        console.log("Correo electrónico:", correoElectronico);
+        console.log("Contraseña:", password);
 
-            // Verifica el campo "role" en minúsculas
-            if (result.role === "Empleado") {
-                // Almacenar el empleadoID en localStorage
-                localStorage.setItem('empleadoID', result.user.empleadoID); // Guarda el empleadoID
-                // Redirigir a la vista de empleado
-                window.location.href = "vista/empleado.html"; // Asegúrate de que la ruta existe
-            } else if (result.role === "Cliente") {
-                // Almacenar el clienteID en localStorage
-                localStorage.setItem('clienteID', result.user.clienteID); // Guarda el clienteID
-                // Redirigir a la vista de cliente
-                window.location.href = "vista/cliente.html"; // Asegúrate de que la ruta existe
-            } else {
-                console.log("Rol desconocido:", result.role); // Manejar el caso de un rol no esperado
-            }
-        } else {
-            // Manejar error de inicio de sesión
-            alert("Credenciales inválidas");
+        if (!correoElectronico || !password) {
+            alert("Por favor, complete ambos campos antes de iniciar sesión.");
+            return;
         }
-    } catch (error) {
-        console.error("Error al realizar la solicitud:", error);
-        alert("Error al conectarse con el servidor.");
+
+        const requestData = {
+            CorreoElectronico: correoElectronico,
+            Password: password
+        };
+
+        try {
+            // Enviar la solicitud POST a la API de login
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestData)
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Respuesta del servidor:', result);
+
+                // Verificar el rol del usuario y redirigir a la vista correspondiente
+                if (result.role === "Empleado") {
+                    window.location.href = "/vista/empleado.html";
+                } else if (result.role === "Cliente") {
+                    window.location.href = "/vista/cliente.html";
+                } else {
+                    console.log("Rol desconocido:", result.role);
+                }
+            } else {
+                alert("Credenciales inválidas");
+            }
+        } catch (error) {
+            console.error("Error al realizar la solicitud:", error);
+            alert("Error al conectarse con el servidor.");
+        }
+    } else {
+        console.log("El botón de 'Registrarse' fue presionado, no se ejecuta el login.");
     }
 });
