@@ -28,6 +28,29 @@ namespace gymapiweb.Data
             return empleado;
         }
 
+
+  // Método para registrar un nuevo cliente usando un procedimiento almacenado
+        public async Task RegistrarClienteAsync(Cliente nuevoCliente)
+        {
+            // Parámetros del procedimiento almacenado
+            var parameters = new[]
+            {
+                new SqlParameter("@Nombre", nuevoCliente.Nombre),
+                new SqlParameter("@Apellido", nuevoCliente.Apellido),
+                new SqlParameter("@Sexo", nuevoCliente.Sexo),
+                new SqlParameter("@FechaNacimiento", nuevoCliente.FechaNacimiento ?? (object)DBNull.Value),
+                new SqlParameter("@Telefono", nuevoCliente.Telefono),
+                new SqlParameter("@CorreoElectronico", nuevoCliente.CorreoElectronico),
+                new SqlParameter("@Direccion", nuevoCliente.Direccion),
+                new SqlParameter("@Password", nuevoCliente.Password)
+            };
+
+            // Ejecutar el procedimiento almacenado
+            await Database.ExecuteSqlRawAsync("EXEC sp_RegistrarCliente @Nombre, @Apellido, @Sexo, @FechaNacimiento, @Telefono, @CorreoElectronico, @Direccion, @Password", parameters);
+        }
+
+
+
         // Método para iniciar sesión de Cliente
         public async Task<bool> LoginClienteAsync(string correoElectronico, string password)
         {
